@@ -5,7 +5,7 @@ import time
 import concurrent.futures
 import threading
 
-ruta='https://github.com/villamont/Laboratorio_2/'
+ruta='/home/jorgx/Documentos/Python/Nivel_2/Laboratorio_2'
 
 thread_local = threading.local()
 
@@ -19,10 +19,10 @@ def escritura_resultado(resul_time):
 
 
 def read_users(user):
-    #for i in lista:
-        usr=api.getOneUser(user)
-        print("Username is: ", usr["name"])
+    usr=api.getOneUser(user)
+    print("Username is: ", usr["name"])
 
+####implementando el threading
 
 def read_all_users(lista):
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
@@ -34,7 +34,6 @@ if __name__ == "__main__":
 start_time = time.time()
 read_all_users(lista)
 duration = time.time() - start_time
-escritura_resultado(duration)
 print(f"Readed {len(lista)} users in {duration} seconds")
-        
+escritura_resultado(duration)        
 
