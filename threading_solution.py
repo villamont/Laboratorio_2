@@ -5,7 +5,7 @@ import time
 import concurrent.futures
 import threading
 
-ruta='/home/jorgx/Documentos/Python/Nivel_2/Laboratorio_2'
+ruta='/home/jorgx/Documentos/Python/Nivel_2/Laboratorio_2/'
 
 thread_local = threading.local()
 
