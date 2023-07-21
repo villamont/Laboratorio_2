@@ -25,5 +25,5 @@ read_users()
 duration = time.time() - start_time
 escritura_resultado(duration)
 print(f"Readed {len(ids.ids)} users in {duration} seconds")
-
+escritura_resultado(duration)
         
